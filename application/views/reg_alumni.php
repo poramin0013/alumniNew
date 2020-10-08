@@ -13,15 +13,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="<?php echo base_url();?>css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo base_url();?>css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo base_url();?>css/themify-icons.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo base_url();?>css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo base_url();?>css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo base_url();?>css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo base_url();?>css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo base_url();?>css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo base_url();?>css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/themify-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 
     <link href="http://localhost/alumni/source/dataTables/dataTables.bootstrap4.min.css" rel="stylesheet">
 </head>
@@ -164,7 +164,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <div class="form-group col-md-6">
                         <label >เบอร์โทรศัพท์</label>
-                        <input type="text" class="form-control" name="p_tel">
+                        <input type="text" class="form-control" name="tel">
                     </div>
                     <div class="form-group col-md-6">
                         <label>Facebook</label>

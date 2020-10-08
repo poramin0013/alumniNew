@@ -16,4 +16,9 @@ class Welcome extends CI_Controller {
 	{
 		$this->loan->view('config_reg');
 	} */
+	public function view_reg()
+	{
+		$this->load->view('view_reg');
+		
+	}
 }
