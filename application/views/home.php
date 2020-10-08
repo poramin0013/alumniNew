@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Fashi Template">
@@ -13,15 +15,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/themify-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url();?>css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url();?>css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url();?>css/themify-icons.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url();?>css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url();?>css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url();?>css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url();?>css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url();?>css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url();?>css/style.css" type="text/css">
 
     <link href="http://localhost/alumni/source/dataTables/dataTables.bootstrap4.min.css" rel="stylesheet">
 </head>
@@ -131,20 +133,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <table id="example" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
-                        <th>รหัสักศึกษา</th>
+                        <th>รหัสนักศึกษา</th>
                         <th>ชื่อ</th>
                         <!-- xxxxx -->
                         <th>แสดง</th>
                     </tr>
                 </thead>
                 <tbody>
+                <?php foreach($datapersonal->result_array() as $row){ ?>
                     <tr>
-                        <td>test</td>
-                        <td>test</td>
+                        <td><?php echo $row['student_id'];?></td>
+                        <td><?php echo $row['name'];?></td>
                         <!-- <td> อยากแสดงอะไรเพิ่มเองเลยนะ</td> -->
-                        <td><button type="button" class="btn" style="background-color:#e7ab3c;color:#fff;" onclick=""  data-toggle="modal" data-target="#details" >รายละเอียด</button></td>
+                        <td><button type="button" class="btn" style="background-color:#e7ab3c;color:#fff;" onclick=" show(<?php echo $row['student_id']; ?>)"  data-toggle="modal" data-target="#details" >รายละเอียด</button></td>
                     </tr>
-
+            <?php }; ?>
                 </tbody>
             </table>
             <br>
@@ -181,34 +184,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-
-
-
-
-
-
-
-
 <?php include("footer.php") ?>
 
 <script type="text/javascript">
 
-// function show(id) {
-// 	var form_data = new FormData();
-// 	form_data.append('id', id);
-// 	var getData = $.ajax({
-// 		url: 'js_show.php',
-// 		dataType: 'text',
-// 		cache: false,
-// 		contentType: false,
-// 		processData: false,
-// 		data: form_data,
-// 		type: 'post',
-// 		async: true,
-// 		success: function(getData) {
-// 			$("#show_details").html(getData);
-// 		}
-// 	}).responseText;
-// }
+ function show(id) {
+ 	var form_data = new FormData();
+ 	form_data.append('id', id);
+ 	var getData = $.ajax({
+ 		url: 'view_reg.php',
+ 		dataType: 'text',
+ 		cache: false,
+ 		contentType: false,
+ 		processData: false,
+ 		data: form_data,
+ 		type: 'post',
+ 		async: true,
+ 		success: function(getData) {
+ 			$("#show_details").html(getData);
+ 		}
+ 	}).responseText;
+ }
 
 </script>

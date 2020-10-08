@@ -41,15 +41,26 @@ class Manage_model extends CI_Model {
 		}	*/
 
 		function personal_view(){
-			$this->db->select('card_id,student_id,name,gender,birthday,address,tel,email,facebook,img');
+			
+			//$this->db->select('card_id,student_id,name,gender,birthday,address,tel,email,facebook,img');
+			$this->db->select('*');
 			$data = $this->db->get('personal');
 			return $data;
-		}function alumni_view(){
-			$this->db->select('student_id,group,branch,faculty,semester,education_level,year_int,year_out,outstanding_work');
+		}
+
+		/*function abc(){
+			$this->db->select('*');
+			$data = $this->db->get_where('personal', array('student_id' => $id));
+			return $data;
+		}*/
+		function alumni_view(){
+			///$this->db->select('student_id,group,branch,faculty,semester,education_level,year_int,year_out,outstanding_work');
+			$this->db->select('*');
 			$data = $this->db->get('alumni');
 			return $data;
 		}function workinformation_view(){
-			$this->db->select('student_id,company,position,address,tel');
+			//$this->db->select('student_id,company,position,address,tel');
+			$this->db->select('*');
 			$data = $this->db->get('workinformation');
 			return $data;
         }
