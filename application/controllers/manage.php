@@ -9,9 +9,7 @@ class Manage extends CI_Controller {
     }
 
     public function index(){
-
-        //$this->load->view('reg_alumni');
-        //$this->load->view('footer');
+      
     }
 
     public function reg_alumni(){
@@ -60,7 +58,7 @@ class Manage extends CI_Controller {
             'company' => $this->input->post("company"),
             'position' => $this->input->post("position"),
             'address'=> $address2,
-            'c_tel' => $this->input->post("c_tel")
+            'tel' => $this->input->post("c_tel")
 
         );
 
@@ -69,21 +67,15 @@ class Manage extends CI_Controller {
         $this->Manage_model->personal_insert($datapersonal);
         $this->Manage_model->alumni_insert($dataalumni);
         $this->Manage_model->workinformation_insert($dataworkinformation);
-        //$this->loan->view('perview');
-
-       
-
-       
-
-        
+        $this->load->view('view_reg');     
     }
-
     public function view_reg(){
        
         $data['datapersonal'] = $this->Manage_model->personal_view();
         $data['dataalumni'] = $this->Manage_model->alumni_view();
         $data['dataworkinformation'] = $this->Manage_model->workinformation_view();
-        $this->load->view('view_reg',$data);
+        $this->load->view('view_reg',$data);  
     }
+   
            
 }

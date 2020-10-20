@@ -2,10 +2,15 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
+	function __construct(){
+        parent::__construct();
+        $this->load->model('Manage_model');
+    }
 
 	public function index()
 	{
-		$this->load->view('home');
+		$data['datapersonal'] = $this->Manage_model->personal_view(); 
+        $this->load->view('home',$data);
 	}
 	public function reg_alumni()
 	{
@@ -18,7 +23,10 @@ class Welcome extends CI_Controller {
 	} */
 	public function view_reg()
 	{
-		$this->load->view('view_reg');
+		$data['datapersonal'] = $this->Manage_model->personal_view(); 
+		$data['dataalumni'] = $this->Manage_model->alumni_view();
+        $data['dataworkinformation'] = $this->Manage_model->workinformation_view();
+		$this->load->view('view_reg',$data);
 		
 	}
 }
