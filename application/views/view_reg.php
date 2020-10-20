@@ -116,9 +116,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href="http://localhost/alumni/source/dataTables/dataTables.bootstrap4.min.css" rel="stylesheet">
 </head>
 <?php
-foreach ($datapersonal->result_array() as $rowPersonal) {
-    foreach ($dataalumni->result_array() as $rowAlumni) {
-        foreach ($dataworkinformation->result_array() as $rowWorkinformation) {
+foreach ($datapersonal->result_array() as $row) {
+   
            echo '<table id="table_details" class="table table-striped table-bordered" style="width:100%">';
 
             echo '<thead>
@@ -130,13 +129,13 @@ foreach ($datapersonal->result_array() as $rowPersonal) {
                     <tr>
                         <td style="width:130px;">ชื่อ - นามสกุล</td>
                         <td>';
-            echo $rowPersonal['name'];
+            echo $row['name'];
             echo ' </td>
                         <td rowspan="3"  style="width:130px;" >';
-            if ($rowPersonal['img'] != "noImage") {
+            if ($row['img'] != "noImage") {
                 echo '<img style="width:125px;border:1px solid #e7ab3c; border-radius: 4px;" id="image"
                                     src="img/upload/';
-                echo $rowPersonal['img'];
+                echo $row['img'];
                 echo ' ">';
             } else {
                 echo '<img style="width:125px;border:1px solid #e7ab3c; border-radius: 4px;" id="image"
@@ -147,37 +146,37 @@ foreach ($datapersonal->result_array() as $rowPersonal) {
                     <tr>
                         <td>เพศ</td>
                         <td>';
-            echo $rowPersonal['gender'];
+            echo $row['gender'];
             echo ' </td>
                     </tr>
                     <tr>
                         <td>วันเดือนปีเกิด</td>
                         <td>';
-            echo $rowPersonal['birthday'];
+            echo $row['birthday'];
             echo ' </td>
                     </tr>
                     <tr>
                         <td>ที่อยู่</td>
                         <td colspan="2">';
-            echo $rowPersonal['address'];
+            echo $row['address'];
             echo ' </td>
                     </tr>
                     <tr>
                         <td>เบอร์โทรศัพท์</td>
                         <td colspan="2">';
-            echo $rowPersonal['tel'];
+            echo $row['tel'];
             echo ' </td>
                     </tr>
                     <tr>
                         <td>Facebook</td>
                         <td colspan="2">';
-            echo $rowPersonal['facebook'];
+            echo $row['facebook'];
             echo ' </td>
                     </tr>
                     <tr>
                         <td>Email</td>
                         <td colspan="2">';
-            echo $rowPersonal['email'];
+            echo $row['email'];
             echo ' </td>
                     </tr>
                 </tbody>';
@@ -196,56 +195,56 @@ foreach ($datapersonal->result_array() as $rowPersonal) {
                     <tr>
                         <td style="width:160px;">รหัสนักศึกษา</td>
                         <td>';
-            echo $rowAlumni['student_id'];
+            echo $row['student_id'];
             echo ' </td>
                     </tr>
                     <tr>
                         <td>หมู่เรียน</td>
                         <td>';
-            echo $rowAlumni['group'];
+            echo $row['group'];
             echo ' </td>
                     </tr>
                     <tr>
                         <td>สาขา</td>
                         <td>';
-            echo $rowAlumni['branch'];
+            echo $row['branch'];
             echo ' </td>
                     </tr>
                     <tr>
                         <td>คณะ</td>
                         <td>';
-            echo $rowAlumni['faculty'];
+            echo $row['faculty'];
             echo ' </td>
                     </tr>
                     <tr>
                         <td>ภาคการศึกษา</td>
                         <td>';
-            echo $rowAlumni['semester'];
+            echo $row['semester'];
             echo ' </td>
                     </tr>
                     <tr>
                         <td>ระดับการศึกษา</td>
                         <td>';
-            echo $rowAlumni['education_level'];
+            echo $row['education_level'];
             echo ' </td>
                     </tr>
                     <tr>
                         <td>ปีการศึกษาที่เข้า</td>
                         <td>';
-            echo $rowAlumni['year_int'];
+            echo $row['year_int'];
             echo ' </td>
                     </tr>
                     <tr>
                         <td>ปีการศึกษาที่จบ</td>
                         <td>';
-            echo $rowAlumni['year_out'];
+            echo $row['year_out'];
             echo ' </td>
                     </tr>
                     <tr>
                         <td>
                         ผลงานที่โดดเด่น</td>
                         <td>';
-            echo $rowAlumni['outstanding_work'];
+            echo $row['outstanding_work'];
             echo ' </td>
                     </tr>
                 </tbody>';
@@ -265,25 +264,25 @@ foreach ($datapersonal->result_array() as $rowPersonal) {
                     <tr>
                         <td style="width:160px;">ชื่อบริษัท</td>
                         <td>';
-            echo $rowWorkinformation['company'];
+            echo $row['company'];
             echo ' </td>
                     </tr>
                     <tr>
                         <td>ตำแหน่งงาน</td>
                         <td>';
-            echo $rowWorkinformation['position'];
+            echo $row['position'];
             echo ' </td>
                     </tr>
                     <tr>
                         <td>ที่อยู่</td>
                         <td>';
-            echo $rowWorkinformation['address'];
+            echo $row['address'];
             echo ' </td>
                     </tr>
                     <tr>
                         <td>เบอร์โทรศัพท์บริษัท</td>
                         <td>';
-            echo $rowWorkinformation['tel'];
+            echo $row['tel'];
             echo ' </td>
                     </tr>
                 </tbody>';
@@ -291,9 +290,8 @@ foreach ($datapersonal->result_array() as $rowPersonal) {
 
             echo '</table>';
         };
-    };
-};
-    
+
+
 
 ?>
 </div>
