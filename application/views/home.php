@@ -129,37 +129,44 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
             <table id="example" class="table table-striped table-bordered" style="width:100%">
-                <thead>
+            <thead>
                     <tr>
-                        <th>รหัสักศึกษา</th>
+                        <th>รหัสนักศึกษา</th>
                         <th>ชื่อ</th>
+                        <th>หมู่เรียน</th>
+                        <th>ปีการศึกษาแรกเข้า</th>
+                        <th>จังหวัด</th>
                         <!-- xxxxx -->
                         <th>แสดง</th>
                     </tr>
                 </thead>
                 <tbody>
-                <?php foreach($datapersonal->result_array() as $row){ ?>
+                <?php foreach($datapersonal->result_array() as $row) {?>
                     <tr>
                         <td><?php echo $row['student_id'];?></td>
                         <td><?php echo $row['name'];?></td>
                         <td><?php echo $row['group'];?></td>
                         <td><?php echo $row['year_int'];?></td>
                         <td><?php echo $row['province'];?></td>
-                    
+                        <!-- <td> อยากแสดงอะไรเพิ่มเองเลยนะ</td> -->
+
                         <td><a href="<?php echo base_url();?>index.php/welcome/view_reg">รายละเอียด</a></td>
-                        </tr>
-                    <?php }; ?>
+
+                    
+                    </tr>
+                    
+                  
+            <?php }; ?>
                 </tbody>
-            </table>
+                </table>
             <br>
-            <br>
-        </div>
+            <br>     
+             </div>     
         <div class="col-lg-1">
         </div>
     </div>
 </div>
 <!--  -->
-
 
 
 <?php include("footer.php") ?>
