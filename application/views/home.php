@@ -145,7 +145,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <td><?php echo $row['student_id'];?></td>
                         <td><?php echo $row['name'];?></td>
                         <!-- <td> อยากแสดงอะไรเพิ่มเองเลยนะ</td> -->
+<<<<<<< HEAD
                         <td><a href="<?php echo base_url();?>index.php/welcome/view_reg">รายละเอียด</a></td>
+=======
+                        <td><button type="button" class="btn" style="background-color:#e7ab3c;color:#fff;" onclick=" show(<?php echo $row['student_id']; ?>)"  data-toggle="modal" data-target="#details" >รายละเอียด</button></td>
+>>>>>>> bf5b4100e72a48a3ff508956b2a705d1228b3c96
                     </tr>
             <?php }; ?>
                 </tbody>
@@ -159,4 +163,55 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 <!--  -->
 
+<<<<<<< HEAD
 <?php include("footer.php") ?>
+=======
+
+<!-- -->
+<div class="modal fade" id="details" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog"  role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h3><span class="badge" style="background-color:#e7ab3c;color:#fff;">รายละเอียด</span></h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                 <div id="show_details"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  -->
+
+
+
+
+<?php include("footer.php") ?>
+
+<script type="text/javascript">
+
+ function show(id) {
+ 	var form_data = new FormData();
+ 	form_data.append('id', id);
+ 	var getData = $.ajax({
+ 		url: 'view_reg.php',
+ 		dataType: 'text',
+ 		cache: false,
+ 		contentType: false,
+ 		processData: false,
+ 		data: form_data,
+ 		type: 'post',
+ 		async: true,
+ 		success: function(getData) {
+ 			$("#show_details").html(getData);
+ 		}
+ 	}).responseText;
+ }
+
+</script>
+>>>>>>> bf5b4100e72a48a3ff508956b2a705d1228b3c96

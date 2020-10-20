@@ -9,7 +9,16 @@ class Manage extends CI_Controller {
     }
 
     public function index(){
+<<<<<<< HEAD
       
+=======
+        $data['datapersonal'] = $this->Manage_model->personal_view();
+        $data['dataalumni'] = $this->Manage_model->alumni_view();
+        $data['dataworkinformation'] = $this->Manage_model->workinformation_view();
+        $this->load->view('home',$data);
+        //$this->load->view('reg_alumni');
+        //$this->load->view('footer');
+>>>>>>> bf5b4100e72a48a3ff508956b2a705d1228b3c96
     }
 
     public function reg_alumni(){
@@ -67,13 +76,21 @@ class Manage extends CI_Controller {
         $this->Manage_model->personal_insert($datapersonal);
         $this->Manage_model->alumni_insert($dataalumni);
         $this->Manage_model->workinformation_insert($dataworkinformation);
+<<<<<<< HEAD
         $this->load->view('view_reg');     
+=======
+        //$this->loan->view('perview');     
+>>>>>>> bf5b4100e72a48a3ff508956b2a705d1228b3c96
     }
     public function view_reg(){
        
         $data['datapersonal'] = $this->Manage_model->personal_view();
         $data['dataalumni'] = $this->Manage_model->alumni_view();
         $data['dataworkinformation'] = $this->Manage_model->workinformation_view();
+<<<<<<< HEAD
+=======
+        $this->load->view('home',$data);
+>>>>>>> bf5b4100e72a48a3ff508956b2a705d1228b3c96
         $this->load->view('view_reg',$data);  
     }
    
