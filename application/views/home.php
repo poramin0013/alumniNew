@@ -1,8 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Fashi Template">
@@ -15,15 +13,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="<?php echo base_url();?>css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo base_url();?>css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo base_url();?>css/themify-icons.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo base_url();?>css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo base_url();?>css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo base_url();?>css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo base_url();?>css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo base_url();?>css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo base_url();?>css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/themify-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 
     <link href="http://localhost/alumni/source/dataTables/dataTables.bootstrap4.min.css" rel="stylesheet">
 </head>
@@ -131,35 +129,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
             <table id="example" class="table table-striped table-bordered" style="width:100%">
-
                 <thead>
                     <tr>
-                        <th>รหัสนักศึกษา</th>
+                        <th>รหัสักศึกษา</th>
                         <th>ชื่อ</th>
-                        <th>หมู่เรียน</th>
-                        <th>ปีการศึกษาแรกเข้า</th>
-                        <th>จังหวัด</th>
                         <!-- xxxxx -->
                         <th>แสดง</th>
                     </tr>
                 </thead>
                 <tbody>
-                <?php foreach($datapersonal->result_array() as $row){ {?>
+                <?php foreach($datapersonal->result_array() as $row){ ?>
                     <tr>
                         <td><?php echo $row['student_id'];?></td>
                         <td><?php echo $row['name'];?></td>
                         <td><?php echo $row['group'];?></td>
                         <td><?php echo $row['year_int'];?></td>
                         <td><?php echo $row['province'];?></td>
-                        <!-- <td> อยากแสดงอะไรเพิ่มเองเลยนะ</td> -->
-
+                    
                         <td><a href="<?php echo base_url();?>index.php/welcome/view_reg">รายละเอียด</a></td>
-
-                    
-                    </tr>
-                    
-                  
-            <?php }; ?>
+                        </tr>
+                    <?php }; ?>
                 </tbody>
             </table>
             <br>
@@ -171,5 +160,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 <!--  -->
 
-<?php include("footer.php") ?>
 
+
+<?php include("footer.php") ?>
