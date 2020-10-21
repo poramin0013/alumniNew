@@ -1,6 +1,7 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 ?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Fashi Template">
@@ -27,55 +28,55 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <header class="header-section">
-        <div class="container">
-            <div class="inner-header">
-                <div class="row">
-                    <div class="col-lg-2 col-md-2">
-                        <div class="logo">
-                            <!--  -->
-                        </div>
+    <div class="container">
+        <div class="inner-header">
+            <div class="row">
+                <div class="col-lg-2 col-md-2">
+                    <div class="logo">
+                        <!--  -->
                     </div>
-                    <div class="col-lg-8 col-md-8">
-                        <div style="text-align: center;" > 
-                            <h2>ระบบสมาชิกศิษย์เก่า</h2>
-                            <h3>Nakhon Pathom Rajabhat University</h3>
-                            <img src="img/npru.png" >
-                        </div>
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <div style="text-align: center;">
+                        <h2>ระบบสมาชิกศิษย์เก่า</h2>
+                        <h3>Nakhon Pathom Rajabhat University</h3>
+                        <img src="img/npru.png">
                     </div>
-                    <div class="col-lg-2 text-right col-md-2">
+                </div>
+                <div class="col-lg-2 text-right col-md-2">
                     <!-- XXXX -->
-                    </div>
                 </div>
             </div>
         </div>
-        <div class="nav-item">
-            <div class="container">
-                <nav class="nav-menu mobile-menu">
-                    <ul>
-                        <li class="index"><a href="index.php">หน้าแรก</a></li>
-                        
-                       
-                        <li><a href="#"  data-toggle="modal" data-target="#login">เข้าสู่ระบบ</a></li>
-                        <li class="register" ><a href="<?php echo base_url();?>index.php/welcome/reg_alumni">ลงทะเบียน</a></li>
-                       
-                      
-                        <li class="edit"><a href="edit.php">ประวัติส่วนตัว</a></li>
-                        <li><a href="#"  data-toggle="modal" data-target="#logout">ออกจากระบบ</a></li>
-                      
+    </div>
+    <div class="nav-item">
+        <div class="container">
+            <nav class="nav-menu mobile-menu">
+                <ul>
+                    <li class="index"><a href="index.php">หน้าแรก</a></li>
 
-                    </ul>
-                </nav>
-                <div id="mobile-menu-wrap"></div>
-            </div>
+
+                    <li><a href="#" data-toggle="modal" data-target="#login">เข้าสู่ระบบ</a></li>
+                    <li class="register"><a href="<?php echo base_url(); ?>index.php/welcome/reg_alumni">ลงทะเบียน</a></li>
+
+
+                    <li class="edit"><a href="edit.php">ประวัติส่วนตัว</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#logout">ออกจากระบบ</a></li>
+
+
+                </ul>
+            </nav>
+            <div id="mobile-menu-wrap"></div>
         </div>
-        <div class="nav-item" style="background-color: #fff;">
-        </div>
-    </header>
+    </div>
+    <div class="nav-item" style="background-color: #fff;">
+    </div>
+</header>
 <style>
-.index{
-    background-color:#e7ab3c;
-    color:#fff;
-}
+    .index {
+        background-color: #e7ab3c;
+        color: #fff;
+    }
 </style>
 
 <!--  -->
@@ -118,7 +119,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <br>
     <div class="row">
         <div class="col-lg-1">
-        <?php //echo $_SESSION["name"] ; ?>
+            <?php //echo $_SESSION["name"] ; 
+            ?>
         </div>
         <div class="col-lg-10">
             <div class="contact-widget">
@@ -129,7 +131,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
             <table id="example" class="table table-striped table-bordered" style="width:100%">
-            <thead>
+                <thead>
                     <tr>
                         <th>รหัสนักศึกษา</th>
                         <th>ชื่อ</th>
@@ -141,27 +143,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </tr>
                 </thead>
                 <tbody>
-                <?php foreach($datapersonal->result_array() as $row) {?>
-                    <tr>
-                        <td><?php echo $row['student_id'];?></td>
-                        <td><?php echo $row['name'];?></td>
-                        <td><?php echo $row['group'];?></td>
-                        <td><?php echo $row['year_int'];?></td>
-                        <td><?php echo $row['province'];?></td>
-                        <!-- <td> อยากแสดงอะไรเพิ่มเองเลยนะ</td> -->
+                    <?php foreach ($datapersonal->result_array() as $row) { ?>
+                        <tr>
+                            <td><?php echo $row['student_id']; ?></td>
+                            <td><?php echo $row['name']; ?></td>
+                            <td><?php echo $row['group']; ?></td>
+                            <td><?php echo $row['year_int']; ?></td>
+                            <td><?php echo $row['province']; ?></td>
+                            <!-- <td> อยากแสดงอะไรเพิ่มเองเลยนะ</td> -->
 
-                        <td><a href="<?php echo base_url();?>index.php/welcome/view_reg">รายละเอียด</a></td>
+                            <td>
+                                <form action="<?php echo base_url('index.php/manage/info_list'); ?>" method="post">
+                                    <input type="hidden" name="id" value="<?php echo $row['student_id']; ?>">
+                                    <button class="btn btn-info" name="submit">ดูรายละเอียด</button>
+                                </form>
+                            </td>
 
-                    
-                    </tr>
-                    
-                  
-            <?php }; ?>
+                        </tr>
+
+
+                    <?php }; ?>
                 </tbody>
-                </table>
+            </table>
             <br>
-            <br>     
-             </div>     
+            <br>
+        </div>
         <div class="col-lg-1">
         </div>
     </div>

@@ -67,6 +67,11 @@ class Manage extends CI_Controller {
         $data['datapersonal'] = $this->Manage_model->personal_view();
         $this->load->view('view_reg',$data);  
     }
-   
+
+    public function info_list(){
+        $id = $this->input->post('id');
+		$result['datapersonal'] = $this->Manage_model->info_list_m($id);
+		$this->load->view('view_list',$result);
+	}
            
 }
