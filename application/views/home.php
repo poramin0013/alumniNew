@@ -8,7 +8,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <meta name="keywords" content="Fashi, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ระบบสมาชิกศิษย์เก่า</title>
+    <title>SE ALUMNI</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -36,11 +36,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         <!--  -->
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-8">
-                    <div style="text-align: center;">
-                        <h2>ระบบสมาชิกศิษย์เก่า</h2>
-                        <h3>Nakhon Pathom Rajabhat University</h3>
-                        <img src="img/npru.png">
+                <div class="col-lg-8 col-md-8" >
+                    <div style="text-align: center; ">
+                        <h1 style="font-family:TH Sarabun New; color:#145139"><b>ระบบสมาชิกศิษย์เก่า</b></h2>
+                        <h3 style="font-family:Courier New; color:#145139"><b>SOFTWARE ENGINEERING</b></h3>
+                        
                     </div>
                 </div>
                 <div class="col-lg-2 text-right col-md-2">
@@ -51,7 +51,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     </div>
     <div class="nav-item">
         <div class="container">
-            <nav class="nav-menu mobile-menu">
+            <nav class="nav-menu mobile-menu" style="background-color:#58986f">
                 <ul>
                     <li class="index"><a href="index.php">หน้าแรก</a></li>
 
@@ -80,35 +80,23 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </style>
 
 <!--  -->
-<div class="container">
-    <br>
-    <div class="row">
-        <div class="col-lg-1">
-        </div>
-        <div class="col-lg-10">
-            <div class="contact-widget">
-                <div class="cw-item">
-                    <div class="ci-text">
-                        <h3>ประชาสัมพันธ์</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-1">
-        </div>
-    </div>
-    <br>
-</div>
+<br>
 <!--  -->
-
+<br>
 <!-- -->
 <section class="hero-section">
     <div class="hero-items owl-carousel">
-        <div class="single-hero-items set-bg" data-setbg="img/upload/banner1920x600-01.jpg">
+        <div class="single-hero-items set-bg" data-setbg="img/se.png">
         </div>
-        <div class="single-hero-items set-bg" data-setbg="img/upload/banner1920x600-02.jpg">
+        <div class="single-hero-items set-bg" data-setbg="img/01.png">
         </div>
-        <div class="single-hero-items set-bg" data-setbg="img/upload/banner1920x600-03.jpg">
+        <div class="single-hero-items set-bg" data-setbg="img/02.png">
+        </div>
+        <div class="single-hero-items set-bg" data-setbg="img/03.png">
+        </div>
+        <div class="single-hero-items set-bg" data-setbg="img/04.png">
+        </div>
+        <div class="single-hero-items set-bg" data-setbg="img/05.png">
         </div>
     </div>
 </section>
@@ -126,36 +114,36 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <div class="contact-widget">
                 <div class="cw-item">
                     <div class="ci-text">
-                        <h3>ข้อมูลศิษย์เก่า</h3>
+                        <h3 style="font-family:TH Sarabun New; color:#145139">ข้อมูลศิษย์เก่า</h3>
                     </div>
                 </div>
             </div>
-            <table id="example" class="table table-striped table-bordered" style="width:100%">
+            <table id="example" class="table table-striped table-bordered" style="width:100%; background-color: #8FBC8F ; " >
                 <thead>
                     <tr>
-                        <th>รหัสนักศึกษา</th>
-                        <th>ชื่อ</th>
-                        <th>หมู่เรียน</th>
-                        <th>ปีการศึกษาแรกเข้า</th>
-                        <th>จังหวัด</th>
-                        <!-- xxxxx -->
-                        <th>แสดง</th>
+                        <th><h3 style="font-family:TH Sarabun New; color:#145139"><b>รหัสนักศึกษา</b></h3></th>
+                        <th><h3 style="font-family:TH Sarabun New; color:#145139"><b>ชื่อ</b></h3></th>
+                        <th><h3 style="font-family:TH Sarabun New; color:#145139"><b>หมู่เรียน</b></h3></th>
+                        <th><h3 style="font-family:TH Sarabun New; color:#145139"><b>ปีการศึกษาแรกเข้า</b></h3></th>
+                        <th><h3 style="font-family:TH Sarabun New; color:#145139"><b>จังหวัด</b></h3></th>
+                        
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($datapersonal->result_array() as $row) { ?>
                         <tr>
-                            <td><?php echo $row['student_id']; ?></td>
-                            <td><?php echo $row['name']; ?></td>
-                            <td><?php echo $row['group']; ?></td>
-                            <td><?php echo $row['year_int']; ?></td>
-                            <td><?php echo $row['province']; ?></td>
-                            <!-- <td> อยากแสดงอะไรเพิ่มเองเลยนะ</td> -->
+                            <td><h4 style="font-family:TH Sarabun New;"><?php echo $row['student_id']; ?></h4></td>
+                            <td><h4 style="font-family:TH Sarabun New;"><?php echo $row['name']; ?></h4></td>
+                            <td><h4 style="font-family:TH Sarabun New;"><?php echo $row['group']; ?></h4></td>
+                            <td><h4 style="font-family:TH Sarabun New;"><?php echo $row['year_int']; ?></h4></td>
+                            <td><h4 style="font-family:TH Sarabun New;"><?php echo $row['province']; ?></h4></td>
+                            
 
                             <td>
                                 <form action="<?php echo base_url('index.php/manage/info_list'); ?>" method="post">
                                     <input type="hidden" name="id" value="<?php echo $row['student_id']; ?>">
-                                    <button class="btn btn-info" name="submit">ดูรายละเอียด</button>
+                                    <button class="btn btn-info" name="submit" style="background-color: #145139 ; ">ดูรายละเอียด</button>
                                 </form>
                             </td>
 

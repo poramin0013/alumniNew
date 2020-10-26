@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="keywords" content="Fashi, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ระบบสมาชิกศิษย์เก่า</title>
+    <title>SE ALUMNI</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -37,9 +37,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <div class="col-lg-8 col-md-8">
                         <div style="text-align: center;" > 
-                            <h2>ระบบสมาชิกศิษย์เก่า</h2>
-                            <h3>Nakhon Pathom Rajabhat University</h3>
-                            <img src="<?php echo base_url();?>img/npru.png" >
+                             <h1 style="font-family:TH Sarabun New; color:#145139"><b>ระบบสมาชิกศิษย์เก่า</b></h2>
+                        <h3 style="font-family:Courier New; color:#145139"><b>SOFTWARE ENGINEERING</b></h3>
+                            
                         </div>
                     </div>
                     <div class="col-lg-2 text-right col-md-2">
@@ -298,7 +298,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <div>
                     <button type="submit" class="btn" style="background-color:#e7ab3c;color:#fff;">ลงทะเบียน</button>
-                    <button type="reset" class="btn btn-secondary">รีข้อมูล</button>
+                    <button type="reset" class="btn btn-secondary">รีเซ็ตข้อมูล</button>
                 </div>
 
 

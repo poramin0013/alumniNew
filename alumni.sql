@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `alumni`
+-- Database: `alumninew`
 --
 
 -- --------------------------------------------------------
@@ -44,10 +44,10 @@ CREATE TABLE `alumni` (
 --
 
 INSERT INTO `alumni` (`student_id`, `group`, `branch`, `faculty`, `semester`, `education_level`, `year_int`, `year_out`, `outstanding_work`) VALUES
-(614259014, '61/47', 'วิศวกรรมซอฟแวร์', 'วิทยาศาสตร์และเทคโนโลยี', 'ภาคเรียนปกติ', 'ปริญญาตรี', '2561', '2563', '-'),
-(614259029, '61/47', 'วิศวกรรมซอฟแวร์', 'วิทยาศาสตร์และเทคโนโลยี', 'ภาคเรียนปกติ', 'ปริญญาตรี', '2561', '2563', '-'),
-(614259054, '61/47', 'วิศวกรรมซอฟแวร์', 'วิทยาศาสตร์และเทคโนโลยี', 'ภาคเรียนปกติ', 'ปริญญาตรี', '2561', '2563', '---'),
-(614259056, '64/47', 'software enginerring', 'sicent', 'ภาคเรียนปกติ', 'ปริญญาตรี', '2563', '2563', '');
+(614259039, '61/47', 'วิศวกรรมซอฟแวร์', 'วิทยาศาสตร์และเทคโนโลยี', 'ภาคเรียนปกติ', 'ปริญญาตรี', '2561', '2563', '-'),
+(614259038, '61/47', 'วิศวกรรมซอฟแวร์', 'วิทยาศาสตร์และเทคโนโลยี', 'ภาคเรียนปกติ', 'ปริญญาตรี', '2561', '2563', '-'),
+(614259005, '61/47', 'วิศวกรรมซอฟแวร์', 'วิทยาศาสตร์และเทคโนโลยี', 'ภาคเรียนปกติ', 'ปริญญาตรี', '2561', '2563', '---'),
+(123456789, '64/47', 'software enginerring', 'sicent', 'ภาคเรียนปกติ', 'ปริญญาตรี', '2563', '2563', '');
 
 -- --------------------------------------------------------
 
@@ -73,10 +73,10 @@ CREATE TABLE `personal` (
 --
 
 INSERT INTO `personal` (`card_id`, `student_id`, `name`, `gender`, `birthday`, `address`, `tel`, `email`, `facebook`, `img`) VALUES
-('1234567890123', 614259014, 'นาย ณัฐชัย สุบรรณเกตุ', 'ชาย', '0000-00-00', '85 - ดำเนินสะดวก เมือง ราชบุรี 82000', '095-456321', 'Nuttachai_Subangate@gmail.com', 'Nuttachai S. Subangate', '1024px-Steve_Jobs_Headshot_2010-CROP.jpg'),
-('1579900782724', 614259054, 'นางสาว ศุภาดา ทองไทย', 'หญิง', '2541-05-22', '85 - ตะกุดไร ชนแดน เพชรบูรณ์ 67190', '0638025540', 'suphada22.ae@gmail.com', 'ิBlueWhale', 'alone.jpg'),
-('1730501138456', 614259056, 'นางสาวSirinratpanpradidt', 'หญิง', '2020-10-20', '128-บางงปลาบางเลนนครปฐม73130', NULL, '614259029@webmail.npru.ac.th', 'kalumni', NULL),
-('1730501138678', 614259029, 'นางสาว สิรินทร์รัตน์ ปานประดิษฐ์', 'หญิง', '2542-08-03', '129  - บางปลา บางเลน Nakhon Pathom 73000', '095-836838', '614259029@webmail.npru.ac.th', 'Sirinrat Hna Panpradidt ', 'basic form.PNG');
+('1769900552514', 614259039, 'นาย ปรมินทร์ จุมพรม', 'ชาย', '2542-09-06', '18 - ศรีสำราญ สองพี่น้อง สุพรรณบุรี 72190', '0613167091', 'poramin0013@gmail.com', 'PORAMIN JUMPHOM', NULL),
+('1234567891234', 614259038, 'นางสาว จุทมาศ ชานุชิต', 'หญิง', '2542-07-28', '18 - ศรีสำราญ สองพี่น้อง สุพรรณบุรี 72190', '0888888888', 'taitai@gmail.com', 'ต่าย ต่าย', NULL),
+('9876543219876', 614259005, 'นางสาว นฤชา ถนอมพลาดิศัย', 'หญิง', '2543-10-14', '18 - ศรีสำราญ สองพี่น้อง สุพรรณบุรี 72190', '0999999999', 'fouty44@gmail.com', 'NARUACHA FOUR', NULL),
+('1212121212121', 123456789, 'นาย เมธา ฟ้าแวบๆ', 'กระเทย', '2542-08-08', '18 - ศรีสำราญ สองพี่น้อง สุพรรณบุรี 72190', '0666666666', 'metha@gmail.com', 'เมธา ว้าแวบๆ ', NULL);
 
 -- --------------------------------------------------------
 
@@ -99,10 +99,10 @@ CREATE TABLE `workinformation` (
 --
 
 INSERT INTO `workinformation` (`work_id`, `student_id`, `company`, `position`, `address`, `province`, `tel`) VALUES
-(8, 614259054, 'Nakhon Pathom Rajabhat University', 'โปรแกรมเมอร์', '99 85  ม.7 หนองปากโรง เมือง Nakhon Pathom 73000', '', '02-12333333'),
-(9, 614259014, 'Nakhon Pathom Rajabhat University', 'โปรแกรมเมอร์', '99 85 Malai Man Road, Mueang District, Nakhon Pathom Province 73000 หนองปากโรง เมือง Nakhon Pathom 73000', '', '02-12333333'),
-(10, 614259029, 'Nakhon Pathom Rajabhat University', 'โปรแกรมเมอร์', '99 85 Malai Man Road, Mueang District, Nakhon Pathom Province 73000 หนองปากโรง เมือง Nakhon Pathom 73000', '', '02-12333333'),
-(11, 614259056, 'rajabhat nakhon pathom university', 'ceo', '128dsfบางปลาบางเลน73130', 'นครปฐม', '0800253481');
+(8, 614259039, 'Nakhon Pathom Rajabhat University', 'อธิการบดี', '99 85  ม.7 หนองปากโรง เมือง Nakhon Pathom 73000', '', '02-12333333'),
+(9, 614259038, 'Nakhon Pathom Rajabhat University', 'เมียหลวงอธิการ', '99 85 Malai Man Road, Mueang District, Nakhon Pathom Province 73000 หนองปากโรง เมือง Nakhon Pathom 73000', '', '02-12333333'),
+(10, 614259005, 'Nakhon Pathom Rajabhat University', 'เมียน้อยอธิการ', '99 85 Malai Man Road, Mueang District, Nakhon Pathom Province 73000 หนองปากโรง เมือง Nakhon Pathom 73000', '', '02-12333333'),
+(11, 123456789, 'Nakhon Pathom Rajabhat University', 'แม่บ้าน', '99 85 Malai Man Road, Mueang District, Nakhon Pathom Province 73000 หนองปากโรง เมือง Nakhon Pathom 73000', '', '02-12333333');
 
 --
 -- Indexes for dumped tables

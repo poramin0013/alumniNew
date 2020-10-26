@@ -10,9 +10,9 @@
                     </div>
                     <div class="col-lg-8 col-md-8">
                         <div style="text-align: center;" > 
-                            <h2>ระบบสมาชิกศิษย์เก่า</h2>
-                            <h3>Nakhon Pathom Rajabhat University</h3>
-                            <img src="img/npru.png" >
+                        <h1 style="font-family:TH Sarabun New; color:#145139"><b>ระบบสมาชิกศิษย์เก่า</b></h2>
+                        <h3 style="font-family:Courier New; color:#145139"><b>SOFTWARE ENGINEERING</b></h3>
+                           
                         </div>
                     </div>
                     <div class="col-lg-2 text-right col-md-2">
